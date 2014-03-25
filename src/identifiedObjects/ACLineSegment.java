@@ -16,8 +16,7 @@ public class ACLineSegment extends ConductingEquipment {
 	}
 	
 	private void ConnectivityNode getNeighbor(Terminal term) {
-		this.parentEquipment = newParentEquipment;
-		
+			
 	
 	}
 	
