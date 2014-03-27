@@ -1,35 +1,26 @@
 package identifiedObjects;
 
+import java.util.HashSet;
 import java.util.Hashtable;
 
-public class ACLineSegment extends ConductingEquipment {
+public class ACLineSegment extends Conductor {
 
-	private ConductingEquipment parentEquipment; 
-	private float length;
+	private double[][] phaseImpedance; 	
 	
-	public ConductingEquipment getParentEquipment() {
-		return parentEquipment;
+	
+	public double[][] getPhaseImpedance() {
+		return phaseImpedance;
 	}
 
-	private void setParentEquipment(ConductingEquipment parentEquipment) {
-		this.parentEquipment = parentEquipment;
+
+	public void setPhaseImpedance(double[][] phaseImpedance) {
+		this.phaseImpedance = phaseImpedance;
 	}
-	
-	private void ConnectivityNode getNeighbor(Terminal term) {
-			
-	
-	}
-	
-	
+
+
 	public ACLineSegment(Hashtable<String, String> objValues) {
 		super(objValues);
-		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	protected String state() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

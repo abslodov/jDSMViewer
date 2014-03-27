@@ -2,7 +2,7 @@ package identifiedObjects;
 
 import java.util.Hashtable;
 
-public class Disconnector extends ConductingEquipment {
+public class Disconnector extends Switch {
 
 	public Disconnector(Hashtable<String, String> objValues) {
 		super(objValues);
