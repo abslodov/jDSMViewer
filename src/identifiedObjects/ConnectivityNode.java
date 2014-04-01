@@ -26,13 +26,22 @@ public class ConnectivityNode extends IdentifiedObject implements Iterable<Termi
 		return equipment;
 	}
 	
-	other term > other con node > other adjacent equip >  >stop at bus
-	
 	public List<ConductingEquipment> getAllConductingEquipment() {
-		List<ConductingEquipment> equipment = getAdjacentConductingEquipment();
+		List<ConductingEquipment> equipAccum = new ArrayList<ConductingEquipment>(); 
 		
+		for(Terminal term : connections) {
+			// Add ConductingEqupiment to our accumulated list of all equipment.
+			ConductingEquipment ce = term.getParentEquipment();
+			equipAccum.add(ce);
+			
+			ConnectivityNode node = ce.getOtherTerminal(term).getConnectionPoint();
+			equipAccum.addAll(node.getAllConductingEquipment()); 
+		}
 		
+		return equipAccum;
 	}
+	
+	//other term > other con node > other adjacent equip >  >stop at bus
 	
 	
 	public ConnectivityNode(Hashtable<String, String> objValues) {
