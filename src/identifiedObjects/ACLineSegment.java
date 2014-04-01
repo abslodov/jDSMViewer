@@ -7,7 +7,6 @@ public class ACLineSegment extends Conductor {
 
 	private double[][] phaseImpedance; 	
 	
-	
 	public double[][] getPhaseImpedance() {
 		return phaseImpedance;
 	}

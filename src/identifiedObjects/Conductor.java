@@ -27,7 +27,7 @@ public abstract class Conductor extends ConductingEquipment {
 	
 	protected ConnectivityNode getOtherNeighbor(Terminal term)
     {
-        Terminal parentConductor = parentEquipment.getTerminal1();
+        Conductor parentConductor = parentEquipment.getTerminal1();
         if (term == parentEquipment.getTerminal1())
         {
             return parentConductor.getConnectionPoint();
