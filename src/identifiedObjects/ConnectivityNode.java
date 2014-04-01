@@ -26,6 +26,8 @@ public class ConnectivityNode extends IdentifiedObject implements Iterable<Termi
 		return equipment;
 	}
 	
+	//sequence:  other term > other con node > other adjacent equip >  >stop at bus
+	
 	public List<ConductingEquipment> getAllConductingEquipment() {
 		List<ConductingEquipment> equipAccum = new ArrayList<ConductingEquipment>(); 
 		
@@ -41,16 +43,8 @@ public class ConnectivityNode extends IdentifiedObject implements Iterable<Termi
 		return equipAccum;
 	}
 	
-	//other term > other con node > other adjacent equip >  >stop at bus
-	
-	
 	public ConnectivityNode(Hashtable<String, String> objValues) {
-		super(objValues);
-		
-	}
-
-	public ConnectivityNode() {
-		
+		super(objValues);	
 	}
 
 	@Override
