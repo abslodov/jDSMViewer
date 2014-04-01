@@ -25,7 +25,13 @@ public abstract class ConductingEquipment extends Equipment {
 		this.terminal2 = terminal2;
 	}
 	
-
+	public Terminal getOtherTerminal(Terminal term) {
+		if (term == terminal1) return terminal2;
+		else if (term == terminal2) return terminal1;
+		else throw new RuntimeException("Unexpected Terminal");
+	}
+	
+	
 	public static ConductingEquipment newConductingEquipment(Hashtable<String, String> objValues) {
 		switch(objValues.get("Type")) {
 			case "ACLineSegment": return new ACLineSegment(objValues);

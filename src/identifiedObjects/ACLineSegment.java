@@ -6,6 +6,16 @@ import java.util.Hashtable;
 public class ACLineSegment extends Conductor {
 
 	private double[][] phaseImpedance; 	
+	private float length;
+	
+	
+	public float getLength() {
+		return length;
+	}
+
+	public void setLength(float length) {
+		this.length = length;
+	}
 	
 	public double[][] getPhaseImpedance() {
 		return phaseImpedance;

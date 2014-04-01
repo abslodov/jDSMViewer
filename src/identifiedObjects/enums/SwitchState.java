@@ -16,7 +16,7 @@ public enum SwitchState {
 	    	switch (p) {
 	    		case 0: return Open;
 	    		case 1: return Closed;
-	    		default: throw new RuntimeException("Invalid Phase Code");
+	    		default: throw new RuntimeException("Invalid SwitchState");
 	    	}
 	    }
     
