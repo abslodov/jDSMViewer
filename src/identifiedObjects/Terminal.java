@@ -12,6 +12,7 @@ public class Terminal extends IdentifiedObject {
 	private PhaseCode phases;
 	private boolean connected;
 	private Location location;
+	private int sequenceNumber;
     
 	public ConductingEquipment getParentEquipment() {
 		return parentEquipment;
@@ -41,7 +42,7 @@ public class Terminal extends IdentifiedObject {
 		return phases;
 	}
 
-	private void setPhases(PhaseCode phases) {
+	public void setPhases(PhaseCode phases) {
 		this.phases = phases;
 	}
 
@@ -61,6 +62,9 @@ public class Terminal extends IdentifiedObject {
 		this.location = location;
 	}
 	
+	public int getSequenceNumber() { return sequenceNumber; }
+	public void setSequenceNumber(int sequenceNumber) { this.sequenceNumber = sequenceNumber; }
+	
 	
 	public Terminal(Hashtable<String, String> objValues, ConductingEquipment newParentEquipment) {
 		super(objValues);
@@ -68,7 +72,8 @@ public class Terminal extends IdentifiedObject {
 	    this.parentEquipment = newParentEquipment;
 	    this.phases = PhaseCode.convert(Integer.parseInt(objValues.get("Phases")));
 	}
-
+	
+	public Terminal() { }
 }
 
 

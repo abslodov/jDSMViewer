@@ -26,5 +26,13 @@ public enum PhaseCode {
         	}
         }
         
+        public static PhaseCode convert (String s) {
+        	switch(s) {
+        	case "None": return None;
+        	case "A": return A;
+        	// TODO finish this...
+        	}
+        }
+        
 
 }
