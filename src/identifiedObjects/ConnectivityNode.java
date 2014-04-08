@@ -26,7 +26,8 @@ public class ConnectivityNode extends IdentifiedObject implements Iterable<Termi
 		return equipment;
 	}
 	
-	//sequence:  other term > other con node > other adjacent equip >  >stop at bus
+	//sequence:  other term > other con node > other adjacent equip >  > stop at bus
+	//
 	
 	public List<ConductingEquipment> getAllConductingEquipment() {
 		List<ConductingEquipment> equipAccum = new ArrayList<ConductingEquipment>(); 
