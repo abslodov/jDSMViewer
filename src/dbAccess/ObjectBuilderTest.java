@@ -16,7 +16,7 @@ public class ObjectBuilderTest {
 
 	public static void main(String[] args) throws Exception {
 		
-		TerminalBuilder builder = new TerminalBuilder();
+		TerminalBuilder builder = new TerminalBuilder(); //fix error
 		builder.buildAllTerminals();
 	}
 }

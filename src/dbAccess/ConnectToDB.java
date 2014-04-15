@@ -21,7 +21,8 @@ public class ConnectToDB {
     	if (JOptionPane.showOptionDialog(null, obj, "Need password",
     	JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, stringArray, obj) == JOptionPane.YES_OPTION)
     	password = new String(passwordField.getPassword());
-
+    	
+    	//pwd
         String host = "esrl-1.eecs.case.edu";
         int port=22;
         try

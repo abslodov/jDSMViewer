@@ -19,7 +19,7 @@ public class ConnectionUtil {
         String dbUser = "root";
         String dbPasswd = "";
         
-        // Create and return the connection
+        // Create and return the connection.
         Class.forName(driver);
   	  	con = DriverManager.getConnection(url+db, dbUser, dbPasswd);
   	  	
