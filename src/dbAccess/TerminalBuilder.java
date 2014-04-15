@@ -28,7 +28,7 @@ public class TerminalBuilder {
         */
         
         // Terminal SQL Thoughts...
-        // Fields we're uncertain of, need to be addressed in the data & object models:
+        // Uncertain fields, need to be addressed in the data & object models:
         // * mRID
         // * DeviceTypeID
         // * Device_ID
@@ -65,7 +65,7 @@ public class TerminalBuilder {
 	        	  terminals.add(t);
 	          }
 	          
-	          // List of all terminals in your database in memory.
+	          // List of all terminals in the database in memory.
 	          
 	          // Find all terminals of phase code N
 	          //List<Terminal> nTerms = new ArrayList<Terminal>();
